@@ -39,36 +39,36 @@
         }
     </script>
     <script type="text/javascript">
-        var currentYear = new Date().getFullYear();
-        var FirstDay = new Date(currentYear, 8, 01);
-        var firstDate = FirstDay.getDay();
-        if (firstDate == 0)
-            firstDate = 7;
-        var count = (7 - firstDate);
-        var FirstMonday = new Date(currentYear, 8, 1 + count + 1);
-        var DayX = FirstMonday.getDate();
-        var MonthX = FirstMonday.getMonth()
-        var Today = new Date().getDate();
-        var TodayMonth = new Date().getMonth();
-        var stopKnow = new Date(currentYear, 6, 30);
-        var endKnowDay = stopKnow.getDate() + 1;
-        var endKnowMonth = stopKnow.getMonth();
-        var ms = Math.floor((new Date().getTime() - new Date(currentYear, MonthX, DayX).getTime()) / 86400000 / 7);
-        var DayJan = new Date(currentYear, 0, 1);
-        var MondayJan = DayJan.getDay();
-        if (MondayJan == 0)
-            MondayJan = 7;
-        var countJan = (7 - MondayJan);
-        var MondayJanDate = new Date(currentYear, 0, 1 + countJan + 1);
-        var JanMonth = MondayJanDate.getMonth() + 1;
-        var JanDate = MondayJanDate.getDate();
-        var mss = Math.floor((new Date().getTime() - new Date(currentYear, 0, JanDate).getTime()) / 86400000 / 7);
-        var AR = Math.floor((new Date('12/31/' + new Date().getFullYear()).getTime() - new Date('09/01/' + new Date().getFullYear()).getTime()) / 86400000 / 7);
+        
+        
+        var dayFirstSeptember = (new Date(new Date().getFullYear(), 8, 01)).getDay();         
+        if (!dayFirstSeptember) dayFirstSeptember = 7;                                               
+        
+        var dateFirstMondaySeptember = 9 - dayFirstSeptember; 
+        if (dayFirstSeptember == 1) dateFirstMondaySeptember = 1;                             
+       
+
+        var currentDate = new Date().getDate(); 
+        var currentMonth = new Date().getMonth();
+                
+        var countFullWeaksBeforeNY = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 8, dateFirstMondaySeptember).getTime()) / 86400000 / 7);
+       
+        var dayFirstJanuary = (new Date(new Date().getFullYear(), 0, 1)).getDay(); 
+        if (!dayFirstJanuary) dayFirstJanuary = 7;
+        
+        var dayFirstJanuaryMonday = 9 - dayFirstJanuary; 
+        if (dayFirstJanuary == 1) dayFirstJanuaryMonday = 1;
+       
+        var countFullWeaksAfterNY = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, dayFirstJanuaryMonday).getTime()) / 86400000 / 7);
+
+        var countFullWeeksStartSemestr = Math.floor((new Date('12/31/' + new Date().getFullYear()).getTime() - new Date('09/01/' + new Date().getFullYear()).getTime()) / 86400000 / 7);
+
+        
 
         function f_week() {
             f_datE();
-            if (TodayMonth > MonthX) {
-                if ((ms) % 2 == 0) {
+            if (currentMonth > 8) {
+                if ((countFullWeaksBeforeNY) % 2 == 0) {
                     document.getElementById('firstBar').style.opacity = '.2'
                     document.getElementById('secondBar').style.opacity = '1'
                 }
@@ -77,9 +77,9 @@
                     document.getElementById('secondBar').style.opacity = '.2'
                 }
             }
-            else if (TodayMonth == MonthX) {
-                if (Today >= DayX) {
-                    if ((ms) % 2 == 0) {
+            else if (currentMonth == 8) {
+                if (currentDate >= dateFirstMondaySeptember) {
+                    if ((countFullWeaksBeforeNY) % 2 == 0) {
                         document.getElementById('firstBar').style.opacity = '.2'
                         document.getElementById('secondBar').style.opacity = '1'
                     }
@@ -88,47 +88,44 @@
                         document.getElementById('secondBar').style.opacity = '.2'
                     }
                 }
-                else if (Today < DayX && Today >= 1) {
+                else if (currentDate< dateFirstMondaySeptember && currentDate >= 1) { 
                     document.getElementById('firstBar').style.opacity = '1'
                     document.getElementById('secondBar').style.opacity = '.2'
                 }
             }
-            else if (TodayMonth < MonthX) {
-                if (TodayMonth <= endKnowMonth && TodayMonth >= 0) {
-                    if ((TodayMonth == 0) && (Today < JanDate)) {
-                        if (firstDate == 1 && AR == 17) {
+            else if (currentMonth < 8) {
+                if (currentMonth <= 6 && currentMonth >= 0) {
+                    if ((currentMonth == 0) && (currentDate < dayFirstJanuaryMonday)) {
+                        if (dayFirstSeptember == 1 && countFullWeeksStartSemestr == 17) {
                             document.getElementById('firstBar').style.opacity = '1'
                             document.getElementById('secondBar').style.opacity = '.2'
                         }
-                        else if (firstDate != 1 && AR == 17) {
-                            document.getElementById('firstBar').style.opacity = '.2'
-                            document.getElementById('secondBar').style.opacity = '1'
+                        else if (dayFirstSeptember != 1 && countFullWeeksStartSemestr == 17) {  
+                            document.getElementById('firstBar').style.opacity = '1'
+                            document.getElementById('secondBar').style.opacity = '.2'
                         }
-                        else if (firstDate != 1 && AR == 16) {
+                        else if (dayFirstSeptember != 1 && countFullWeeksStartSemestr == 16) {
                             document.getElementById('firstBar').style.opacity = '1'
                             document.getElementById('secondBar').style.opacity = '.2'
                         }
                     }
                     else {
-                        if ((mss) % 2 == 1) {
-                            document.getElementById('firstBar').style.opacity = '.2'
-                            document.getElementById('secondBar').style.opacity = '1'
-                        }
-                        else {
+                        if ((countFullWeaksAfterNY) % 2 == 0) {
                             document.getElementById('firstBar').style.opacity = '1'
                             document.getElementById('secondBar').style.opacity = '.2'
                         }
+                        else {
+                            document.getElementById('firstBar').style.opacity = '.2'
+                            document.getElementById('secondBar').style.opacity = '1'
+                        }
                     }
-
                 }
-                else if (TodayMonth > endKnowMonth) {
+                else if (currentMonth > 6) {
                     document.getElementById('firstBar').style.opacity = '.2'
                     document.getElementById('secondBar').style.opacity = '.2'
                 }
             }
         }
-
-
     </script>
 </head>
 <body onload="f_week()">
