@@ -138,7 +138,7 @@
             <span class="brand">  SSU Parity  </span>
         </div>
         <a class="class1" href="eng.php"> Eng</a>
-        <a class="class1" href="test.php"> / </a>
+        <a class="class1" href="http://www.sgu.ru/structure/computersciences"> / </a>
         <a class="class1" href="http://ssuparity.16mb.com/">Rus</a>
         <div class="content">
             <div id="hello" class='appeal'></div>
