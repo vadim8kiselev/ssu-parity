@@ -13,29 +13,32 @@
         function f_proout() {
             $('#comment').css({ 'opacity': '0' })
         }
+        
+        }
         function f_datE() {
             var months = ["", " January ", " February ", " March ", " April ", " May ", " June ", " July ", " August ", " September ", " October ", " November ", " December "];
             var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', '']
             var time = new Date();
-            var lmonth = months[time.getMonth() + 1]; 
+            var month = months[time.getMonth() + 1]; 
             var date = time.getDate();
             var year = time.getFullYear();
             var day = time.getDay() + 1;
-            var h = time.getHours();
-            var tod = days[time.getDay()];
+            var hour = time.getHours();
+            var today = days[time.getDay()];
+            
             var welcome;
-           if (h >= 0 && h < 6) welcome = "Good night!";
-            if (h >= 6 && h < 12) welcome = "Good morning!";
-            if (h >= 12 && h < 18) welcome = "Good day!";
-            if (h >= 18 && h <= 23) welcome = "Good evening!";
-            var art;
-            if (date%10==1 && date != 11) art = "st";
-            if (date%10==2 && date != 12) art = "nd";
-            if (date%10==3 && date != 13) art = "rd";
-            if (date >= 4 && date <= 20) art = "th";
-            if (date >= 24 && date <= 30) art = "th";
+            if (hour >= 0 && hour < 6) welcome = "Good night!";
+            if (hour >= 6 && hour < 12) welcome = "Good morning!";
+            if (hour >= 12 && hour < 18) welcome = "Good day!";
+            if (hour >= 18 && hour <= 23) welcome = "Good evening!";
+            var article;
+            if (date%10==1 && date != 11) article = "st";
+            if (date%10==2 && date != 12) article = "nd";
+            if (date%10==3 && date != 13) article = "rd";
+            if (date >= 4 && date <= 20) article = "th";
+            if (date >= 24 && date <= 30) article = "th";
 
-             document.getElementById("hello").innerHTML = welcome + " Today is " +  date +art+ " of " + lmonth + year  +   " ("+ tod + ")"    ;
+             document.getElementById("hello").innerHTML = welcome + " Today is " +  date + article + " of " + month + year  +   " ("+ today + ")"    ;
         }
     </script>
     <script type="text/javascript">
