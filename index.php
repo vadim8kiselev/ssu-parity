@@ -22,14 +22,14 @@
             var year = time.getFullYear();
             var day = time.getDay() + 1;
             var hour = time.getHours();
-            var tod = days[time.getDay()];
+            var today = days[time.getDay()];
             
             var welcome;
             if (hour >= 0 && hour < 6) welcome = "Доброй ночи!";
             if (hour >= 6 && hour < 12) welcome = "Доброе утро!";
             if (hour >= 12 && hour < 18) welcome = "Добрый день!";
             if (hour >= 18 && hour <= 23) welcome = "Добрый вечер!";
-            document.getElementById("hello").innerHTML = welcome + " Сегодня " +  date + month + year + " года"+" ("+ tod + ")";
+            document.getElementById("hello").innerHTML = welcome + " Сегодня " +  date + month + year + " года"+" ("+ today + ")";
         }
     </script>
     <script type="text/javascript">
