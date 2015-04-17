@@ -29,7 +29,7 @@
     <script type="text/javascript">
         
         
-        var dayFirstSeptember = (new Date(new Date().getFullYear(), 8, 01)).getDay();         
+        var dayFirstSeptember = (new Date(new Date().getFullYear(), 8, 1)).getDay();         
         if (!dayFirstSeptember) dayFirstSeptember = 7;                                               
         
         var dateFirstMondaySeptember = 9 - dayFirstSeptember; 
