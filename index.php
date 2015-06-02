@@ -82,7 +82,7 @@
                 }
             }
             else if (currentMonth < 8) {
-                if (currentMonth <= 6 && currentMonth >= 0) {
+                if (currentMonth <= 4 && currentMonth >= 0) {
                     if ((currentMonth == 0) && (currentDate < dayFirstJanuaryMonday)) {
                         if (dayFirstSeptember == 1 && countFullWeeksStartSemestr == 17) {
                             document.getElementById('firstBar').style.opacity = '1'
@@ -108,7 +108,7 @@
                         }
                     }
                 }
-                else if (currentMonth > 6) {
+                else if (currentMonth > 4) {
                     document.getElementById('firstBar').style.opacity = '.2'
                     document.getElementById('secondBar').style.opacity = '.2'
                 }
