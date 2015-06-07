@@ -112,7 +112,7 @@
                     document.getElementById('firstBar').style.opacity = '.2'
                     document.getElementById('secondBar').style.opacity = '.2'
                     document.getElementById('firstBar').innerHTML = "Лето"
-		            document.getElementById('secondBar').innerHTML = "Лето"
+		    document.getElementById('secondBar').innerHTML = "Лето"
                 }
             }
         }
