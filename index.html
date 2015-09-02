@@ -38,18 +38,18 @@
             var currentDate                = new Date().getDate()
             var currentMonth               = new Date().getMonth()
 
-            var countFullWeaksBeforeNY = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 8, dateFirstMondayInSeptember).getTime()) / 86400000 / 7)
-            var countFullWeaksAfterNY  = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, dateFirstMondayInJanuary).getTime())   / 86400000 / 7)
+            var countFullWeaksBeforeNY     = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 8, dateFirstMondayInSeptember).getTime()) / 86400000 / 7)
+            var countFullWeaksAfterNY      = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, dateFirstMondayInJanuary).getTime())   / 86400000 / 7)
             
             function weekParity() {
                 date()
                 
-			    var leftBar = '.2'
-			    var rightBar = '1'
+		var leftBar = '.2'
+		var rightBar = '1'
 
-			    function swapBars() {
-			        leftBar = [rightBar, rightBar = leftBar][0]
-			    }
+		function swapBars() {
+		    leftBar = [rightBar, rightBar = leftBar][0]
+		}
 
                 if (currentMonth > 8 && countFullWeaksBeforeNY % 2 != 0) {
                     swapBars()
@@ -69,18 +69,17 @@
                                 swapBars()
                             }
                         }
-                        else
-                            if (countFullWeaksAfterNY % 2 == 0) {
-                                swapBars()
-                            }                        
+                        else if (countFullWeaksAfterNY % 2 == 0) {
+                            swapBars()
+                        }                        
                     }
                     else if (currentMonth > 4) {
                         leftBar = rightBar = '.2'
                         document.getElementById('firstBar').innerHTML  = "Лето"
-		                document.getElementById('secondBar').innerHTML = "Лето"
+		        document.getElementById('secondBar').innerHTML = "Лето"
                     }
                 }
-			    document.getElementById('firstBar').style.opacity  = leftBar
+		document.getElementById('firstBar').style.opacity  = leftBar
                 document.getElementById('secondBar').style.opacity = rightBar
             }
         </script>
