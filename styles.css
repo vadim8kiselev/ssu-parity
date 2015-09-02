@@ -3,29 +3,6 @@
     padding:0px;
 }
 
-a.class1:link {
-    color:#000;
-    text-decoration: none;
-    font-size: 0.8em;
-}
-
-a.class1:visited {
-    text-decoration: none;
-    color:#4779be;
-    font-size: 0.8em;
-}
-
-a.class1:active {
-    text-decoration: none;
-    font-size: 0.8em;
-}
-
-a.class1:hover {
-    text-decoration: none;
-    color:red;
-    font-size: 0.8em;
-}
-
 body {
     background:#fff;
     font-family: Arial, sans-serif;    
@@ -201,7 +178,7 @@ cursor:default;
 
 #about_the_project>img {    
     width:32px;
-    height: 32px;    
+    height:32px;    
 }
 
 @media screen and (max-width: 569px) {
