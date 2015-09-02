@@ -1,0 +1,211 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #FFF;
+    font-family: Arial, sans-serif;    
+    font-size: 170%;
+    color: #FFF;
+    min-width: 649px;
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    background: #841F27;                                 
+    cursor: default;    
+    margin: 0px;   
+    width: 100%;    
+    height: 45px; 
+}
+
+.brand{
+    cursor: default;
+    float: right;
+    padding-right: 10px;
+    margin: 6px;    
+}
+
+@media screen and (max-width: 680px){
+    .brand{
+        cursor: default;
+        float: left;
+        padding-left: 10px;
+        margin: 6px;
+    }
+}
+
+.content{
+    min-width: 800px;
+    margin-top: 200px;
+}
+
+.leftButton{
+    cursor: default;
+    position: relative;
+    top: -100px;
+    background: #841F27;    
+    border-radius: 8px;    
+    float: left;
+    margin-left: 15%;
+    width: 200px;
+    height: 70px;
+    padding-top: 30px ;
+    text-align: center;
+    opacity: 0
+}
+
+.rightButton{
+    cursor: default;
+    background: #841F27;
+    position: relative;
+    top: -100px;
+    border-radius: 8px;    
+    float: right;
+    margin-right: 15%;    
+    width: 200px; 
+    height: 70px;
+    padding-top: 30px ;
+    text-align: center;
+    opacity: 0
+}
+
+.footer{
+    background: #F8F8F8;
+    position: absolute;
+    bottom: 0;
+    margin: 0px;  
+    outline: 1px solid #e7e7e7;   
+    float: left;
+    width: 100%;    
+    height: 45px;
+}
+
+.info{
+    cursor: default;
+    font-family: verdana, arial, sans-serif;
+    color: #000;
+    font-size: 0.6em;
+    line-height: 45px;
+    padding-left: 15px;    
+}
+
+.share{
+    float: right;    
+    margin-right: 8px;
+}
+
+#hello{
+    cursor: default;
+    position: relative;
+    top: -100px;
+    background-color: #FFF;     
+    color: #841F27; 
+    font-size: 0.9em;
+    width: 100%;
+    height: 70px;
+    padding-top: 30px ;
+    text-align: center;
+}
+
+.metrika{
+    float: right;
+    margin-top: 7px;
+    margin-right: 8px;
+}
+
+.quest{
+    float: right;
+    margin-top: 7px;
+    margin-right: 38px;
+}
+
+#info{ 
+    right: 8px;
+    bottom: 75px;
+    position: absolute;
+    width: 262px;
+    height: 122px;    
+}
+
+#comment{
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;    
+    background: white;
+    transition: opacity 1s;
+    width: 230px;
+    height: 90px;
+    border-radius: 10px;
+    background: transparent;
+    border: 4px solid #841F27;
+    color: #841F27;
+    cursor: default;
+    opacity: 0;
+}
+
+#triangle{
+    width: 0px;
+    border: 20px solid transparent;
+    border-top: 20px solid #841F27;
+    position: absolute;
+    left: 92px;
+    top: 118px;
+}
+#triangle2{
+    width: 0px;
+    border: 18px solid transparent;
+    border-top: 19px solid white;
+    position: absolute;
+    left: 94px;
+    top: 114px;    
+}
+
+#about_the_project{
+    overflow: hidden;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#about_the_project>img{    
+    width:  32px;
+    height: 32px;    
+}
+
+@media screen and (max-width: 569px){
+    #about_the_project{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 531px){
+    .metrika{
+        display: none;    
+    }
+}
+
+@media screen and (max-width: 435px){
+    .share{
+        display: none;    
+    }
+}
+
+@media screen and (max-width: 395px){
+    .info{
+        display: none;    
+    }
+    .footer{    
+        width: 649px;
+    }
+}
+
+@media screen and (max-height: 525px){
+    #info{
+        display: none;
+    }
+}
