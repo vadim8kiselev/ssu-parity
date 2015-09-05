@@ -37,11 +37,13 @@ var bars = {
 	leftOpacity: '.2',
 	rightOpacity: '1',
 	summer: false,
-	style: 'source/styles_r.css',
+    swapped: false,
+	style: 'red.css',
 
 	swap: function() {
 		this.leftOpacity = [this.rightOpacity, this.rightOpacity = this.leftOpacity][0]
-		this.style = 'styles.css'
+		this.style = 'blue.css'
+        this.swapped = true
 	},
 	setStyle: function() {
 		var link = document.createElement('link')
@@ -50,6 +52,7 @@ var bars = {
 
 		attrRel.value = "stylesheet"
 		attrHref.value = this.style
+
 		link.setAttributeNode(attrRel)
 		link.setAttributeNode(attrHref)
 		document.head.appendChild(link)
@@ -59,11 +62,16 @@ var bars = {
 
 		window.addEventListener("load", function() {
 			date()
-
+            
 			if(bars.summer) {
             	document.getElementById('firstBar').innerHTML  = "Лето"
             	document.getElementById('secondBar').innerHTML = "Лето"
         	}
+
+            if(bars.swapped) {
+                $('#firstBar').removeClass('disabled')
+                $('#secondBar').addClass('disabled')
+            }
 
 		    document.getElementById('firstBar').style.opacity  = bars.leftOpacity
 		    document.getElementById('secondBar').style.opacity = bars.rightOpacity
@@ -82,11 +90,12 @@ else if (currentMonth == 8) {
         bars.swap()
     }
 }
-else if (currentMonth < 8) {                    
+else if (currentMonth < 8) {
     if (currentMonth <= 4 && currentMonth >= 0) {
         if ((currentMonth == 0) && (currentDate < dateFirstMondayInJanuary)) {
             if (dayFirstOfSeptember == 0 || dayFirstOfSeptember > 4) {
-                bars.swap()                }
+                bars.swap()
+            }
         }
         else if (countFullWeaksAfterNY % 2 == 0) {
             bars.swap()

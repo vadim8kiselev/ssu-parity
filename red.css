@@ -1,0 +1,20 @@
+.header{
+    background: #841F27;
+}
+
+.buttonContainer div {
+    background: #841F27; 
+}
+
+#hello{    
+    color: #841F27;
+}
+
+#comment{
+    border: 4px solid #841F27;
+    color: #841F27;
+}
+
+#triangle{
+    border-top: 20px solid #841F27;
+}

@@ -4,6 +4,7 @@
         <title>SSU Parity</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="layout.css">
         <script type="text/javascript" src='http://code.jquery.com/jquery-latest.js'></script>
         <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
         <script type="text/javascript" src="script.js"></script>
@@ -15,8 +16,10 @@
             </div>
             <div class="content">
                 <div id="hello"     class='appeal'></div>
-                <div id="firstBar"  class="leftButton" >Числитель  </div>
-                <div id="secondBar" class="rightButton">Знаменатель</div>
+                <div class="buttonContainer">
+                    <div id="firstBar" class="leftButton disabled" >Числитель</div>
+                    <div id="secondBar" class="rightButton">Знаменатель</div>
+                </div>
             </div>
             <div class="footer">
                 <span class="info"> SSU Parity &#169 Copyright 2014 - 2015 by Vadim Kiselev</span>
