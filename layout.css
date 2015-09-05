@@ -232,3 +232,9 @@ body{
         margin-top: 0;
     }
 }
+
+@media screen and (max-height: 295px) {
+    .footer {
+        display: none;
+    }
+}
