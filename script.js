@@ -1,10 +1,3 @@
-function proover(){
-    $('#comment').css({ 'opacity': '1' })
-}
-function proout (){
-    $('#comment').css({ 'opacity': '0' })
-}
-
 function date   (){
     var months = [" января ", " февраля ", " марта ", " апреля ", " мая ", " июня ", " июля ", " августа ", " сентября ", " октября ", " ноября ", " декабря "];
     var days   = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
@@ -26,7 +19,6 @@ var dateFirstMondayInSeptember = (dayFirstOfSeptember == 2) ? 7 : (9 - dayFirstO
 var dayFirstOfJanuary          = (new Date(new Date().getFullYear(), 0, 1)).getDay()
 var dateFirstMondayInJanuary   = (dayFirstOfJanuary == 2) ? 7 : (9 - dayFirstOfJanuary) % 7
 
-
 var currentDate                = new Date().getDate()
 var currentMonth               = new Date().getMonth()
 
@@ -37,13 +29,13 @@ var bars = {
 	leftOpacity: '.2',
 	rightOpacity: '1',
 	summer: false,
-    swapped: false,
+        swapped: false,
 	style: 'red.css',
 
 	swap: function() {
 		this.leftOpacity = [this.rightOpacity, this.rightOpacity = this.leftOpacity][0]
 		this.style = 'blue.css'
-        this.swapped = true
+                this.swapped = true
 	},
 	setStyle: function() {
 		var link = document.createElement('link')
@@ -62,19 +54,18 @@ var bars = {
 
 		window.addEventListener("load", function() {
 			date()
-            
 			if(bars.summer) {
-            	document.getElementById('firstBar').innerHTML  = "Лето"
-            	document.getElementById('secondBar').innerHTML = "Лето"
-        	}
+            	                document.getElementById('firstBar').innerHTML  = "Лето"
+            	                document.getElementById('secondBar').innerHTML = "Лето"
+                	}
 
-            if(bars.swapped) {
-                $('#firstBar').removeClass('disabled')
-                $('#secondBar').addClass('disabled')
-            }
+            		if(bars.swapped) {
+                		$('#firstBar').removeClass('disabled')
+                		$('#secondBar').addClass('disabled')
+            		}
 
-		    document.getElementById('firstBar').style.opacity  = bars.leftOpacity
-		    document.getElementById('secondBar').style.opacity = bars.rightOpacity
+			 document.getElementById('firstBar').style.opacity  = bars.leftOpacity
+			 document.getElementById('secondBar').style.opacity = bars.rightOpacity
 		})
 	}
 }
@@ -106,6 +97,5 @@ else if (currentMonth < 8) {
         bars.summer = true
     }
 }
-
 
 bars.main()
