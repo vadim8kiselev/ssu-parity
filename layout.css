@@ -5,7 +5,7 @@
 
 body{
     background: #FFF;
-    font-family: Arial, sans-serif;    
+    font-family: Arial, sans-serif;
     font-size: 170%;
     color: #FFF;
     width: 100%;
@@ -16,14 +16,14 @@ body{
     cursor: default;
     margin: 0px;
     width: 100%;
-    height: 45px; 
+    height: 45px;
 }
 
 .brand{
     cursor: default;
     float: right;
     padding-right: 10px;
-    margin: 6px;    
+    margin: 6px;
 }
 
 @media screen and (max-width: 680px){
@@ -49,11 +49,16 @@ body{
     opacity: 0
 }
 
+.buttonContainer {
+    width: 70%;
+    margin: 0 15%;
+}
+
 .leftButton{
     float: left;
 }
 
-.rightButton{ 
+.rightButton{
     float: right;
 }
 
@@ -73,12 +78,7 @@ body{
     color: #000;
     font-size: 0.6em;
     line-height: 45px;
-    padding-left: 15px;    
-}
-
-.share{
-    float: right;    
-    margin-right: 8px;
+    padding-left: 15px;
 }
 
 #hello{
@@ -92,86 +92,12 @@ body{
     text-align: center;
 }
 
-.metrika{
-    float: right;
-    margin-top: 7px;
-    margin-right: 8px;
-}
-
-.quest{
-    float: right;
-    margin-top: 7px;
-    margin-right: 38px;
-}
-
-#info{ 
+#info{
     right: 8px;
     bottom: 75px;
     position: absolute;
     width: 262px;
-    height: 122px;    
-}
-
-#comment{
-    padding: 12px;
-    text-align: center;
-    font-size: 15px;    
-    background: white;
-    transition: opacity 1s;
-    width: 230px;
-    height: 90px;
-    border-radius: 10px;
-    background: transparent;
-    cursor: default;
-    opacity: 0;
-}
-
-#triangle{
-    width: 0px;
-    border: 20px solid transparent;
-    position: absolute;
-    left: 92px;
-    top: 118px;
-}
-#triangle2{
-    width: 0px;
-    border: 18px solid transparent;
-    border-top: 19px solid white;
-    position: absolute;
-    left: 94px;
-    top: 114px;    
-}
-
-#about_the_project{
-    overflow: hidden;
-    text-align: center;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    cursor: pointer;
-}
-
-#about_the_project>img{    
-    width:  32px;
-    height: 32px;    
-}
-
-@media screen and (max-width: 638px){
-    #about_the_project{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 599px){
-    .metrika{
-        display: none;    
-    }
-}
-
-@media screen and (max-width: 504px){
-    .share{
-        display: none;
-    }
+    height: 122px;
 }
 
 @media screen and (max-width: 464px){
@@ -187,11 +113,6 @@ body{
     #info{
         display: none;
     }
-}
-
-.buttonContainer {
-    width: 70%;
-    margin: 0 15%;
 }
 
 @media screen and (max-width: 660px) {

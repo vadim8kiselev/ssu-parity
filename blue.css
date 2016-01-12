@@ -3,18 +3,9 @@
 }
 
 .buttonContainer div {
-    background: #4779BE; 
+    background: #4779BE;
 }
 
 #hello{
     color: #4779BE;
-}
-
-#comment{
-    border: 4px solid #4779BE;
-    color: #4779BE;
-}
-
-#triangle{
-    border-top: 20px solid #4779BE;
 }
