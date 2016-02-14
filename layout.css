@@ -1,62 +1,52 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     cursor: default;
 }
 
 html {
-    height: 100%;    
-}
-
-body{
-    font-family: Arial, sans-serif;
-    font-size: 170%;
     height: 100%;
 }
 
-.header{
-    margin: 0px;
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 170%;
+}
+
+.header {
     width: 100%;
     height: 45px;
 }
 
-.brand{
+.brand {
     float: left;
-    color: #FFF;
-    padding-left: 10px;
     margin: 6px;
+    padding-left: 10px;
+    color: #FFF;
 }
 
-@media screen and (max-width: 680px){
-    .brand{
-        float: left;
-        padding-left: 10px;
-        margin: 6px;
-    }
-}
-
-.content{
+.content {
     margin: 10% auto;
     width: 70%;
 }
 
-#hello{
-    background-color: #FFF;
-    font-size: 0.9em;
+#hello {
     width: 100%;
     min-height: 60px;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 0.9em;
 }
 
 .buttonContainer div {
-    color: #FFF;
-    border-radius: 8px;
     width: 200px;
     height: 70px;
     padding-top: 30px;
+    border-radius: 8px;
     text-align: center;
-    opacity: 0
+    opacity: 0;
+    color: #FFF;
 }
 
 .buttonContainer {
@@ -64,25 +54,24 @@ body{
     height: 220px;
 }
 
-.leftButton{
+.leftButton {
     float: left;
 }
 
-.rightButton{
+.rightButton {
     float: right;
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 45px;
-    margin: 0px;
     background: #F9F9F9;
     outline: 1px solid #eeeeee;
 }
 
-.info{
+.info {
     float: right;
     padding-right: 15px;
     font-family: verdana, arial, sans-serif;
@@ -91,34 +80,39 @@ body{
     line-height: 45px;
 }
 
+/* Height */
+
 @media screen and (max-height: 330px) {
     .footer {
         display: none;
     }
 }
 
-@media screen and (max-height: 45px) {
-    .header{
-        display: none;
-    }
-}
 @media screen and (max-height: 285px) {
     #hello {
         display: none;
     }
-     
+
     .buttonContainer {
         display: none;
     }
 }
 
+@media screen and (max-height: 45px) {
+    .header {
+        display: none;
+    }
+}
+
+/* Width */
+
 @media screen and (max-width: 730px) {
     #hello {
-        display: none;
+        margin-top: 100px;
     }
 
     .buttonContainer {
-        margin: 150px auto;
+        margin: 20px auto;
         float: none;
         width: 200px;
         height: 260px;
@@ -130,14 +124,16 @@ body{
     }
 }
 
-@media screen and (max-width: 500px) {
-    .footer{
-        display: none;
+@media screen and (max-width: 680px) {
+    .brand {
+        float: left;
+        padding-left: 10px;
+        margin: 6px;
     }
 }
 
-@media screen and (max-width: 406px) {
-    #hello {
+@media screen and (max-width: 500px) {
+    .footer {
         display: none;
     }
 }
