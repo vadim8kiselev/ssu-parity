@@ -1,175 +1,139 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
 }
 
-body{
-    background: #FFF;
-    font-family: Arial, sans-serif;
-    font-size: 170%;
-    color: #FFF;
-    width: 100%;
+html {
     height: 100%;
 }
 
-.header{
-    cursor: default;
-    margin: 0px;
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 170%;
+}
+
+.header {
     width: 100%;
     height: 45px;
 }
 
-.brand{
-    cursor: default;
-    float: right;
-    padding-right: 10px;
+.brand {
+    float: left;
     margin: 6px;
+    padding-left: 10px;
+    color: #FFF;
 }
 
-@media screen and (max-width: 680px){
-    .brand{
-        cursor: default;
+.content {
+    margin: 10% auto;
+    width: 70%;
+}
+
+#hello {
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.buttonContainer div {
+    width: 200px;
+    height: 70px;
+    padding-top: 30px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    color: #FFF;
+}
+
+.buttonContainer {
+    width: 100%;
+    height: 220px;
+}
+
+.leftButton {
+    float: left;
+}
+
+.rightButton {
+    float: right;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: #F9F9F9;
+    outline: 1px solid #eeeeee;
+}
+
+.info {
+    float: right;
+    padding-right: 15px;
+    font-family: verdana, arial, sans-serif;
+    color: #383838;
+    font-size: 0.65em;
+    line-height: 45px;
+}
+
+/* Height */
+
+@media screen and (max-height: 330px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 285px) {
+    #hello {
+        display: none;
+    }
+
+    .buttonContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 45px) {
+    .header {
+        display: none;
+    }
+}
+
+/* Width */
+
+@media screen and (max-width: 730px) {
+    #hello {
+        margin-top: 100px;
+    }
+
+    .buttonContainer {
+        margin: 20px auto;
+        float: none;
+        width: 200px;
+        height: 260px;
+        display: block;
+    }
+
+    .buttonContainer div {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .brand {
         float: left;
         padding-left: 10px;
         margin: 6px;
     }
 }
 
-.content{
-    margin-top: 100px;
-}
-
-.buttonContainer div {
-    cursor: default;
-    border-radius: 8px;
-    width: 200px;
-    height: 70px;
-    padding-top: 30px ;
-    text-align: center;
-    opacity: 0
-}
-
-.buttonContainer {
-    width: 70%;
-    margin: 0 15%;
-}
-
-.leftButton{
-    float: left;
-}
-
-.rightButton{
-    float: right;
-}
-
-.footer{
-    background: #F8F8F8;
-    position: absolute;
-    bottom: 0;
-    margin: 0px;
-    outline: 1px solid #e7e7e7;
-    width: 100%;
-    height: 45px;
-}
-
-.info{
-    cursor: default;
-    font-family: verdana, arial, sans-serif;
-    color: #000;
-    font-size: 0.6em;
-    line-height: 45px;
-    padding-left: 15px;
-}
-
-#hello{
-    cursor: default;
-    background-color: #FFF;
-    font-size: 0.9em;
-    width: 100%;
-    min-height: 60px;
-    padding-top: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#info{
-    right: 8px;
-    bottom: 75px;
-    position: absolute;
-    width: 262px;
-    height: 122px;
-}
-
-@media screen and (max-width: 464px){
-    .info{
-        display: none;
-    }
-    .footer{
-        display: none;
-    }
-}
-
-@media screen and (max-height: 525px){
-    #info{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .buttonContainer {
-        width: 450px;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 500px){
-    .buttonContainer {
-        margin: 0 auto;
-        float: none;
-        width: 200px;
-        height: 100px;
-        display: block;
-    }
-
-    .buttonContainer div {
-        margin-bottom: 15px;
-    }
-}
-
-@media screen and (max-height: 400px) and (max-width: 500px) {
-    .disabled {
-        display: none;
-    }
-}
-
-@media screen and (max-height: 292px) {
-    .footer {
-        display: none;
-    }
-}
-
-@media screen and (max-height: 145px) {
-    .header{
-        display: none;
-    }
-}
-@media screen and (max-height: 260px) {
-     .buttonContainer {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 500px) {
-     #hello {
-        display: none;
-    }
-     .buttonContainer {
-        top: 135px;
-    }
-}
-
-@media screen and (max-width: 406px) {
-    #hello {
+    .footer {
         display: none;
     }
 }
