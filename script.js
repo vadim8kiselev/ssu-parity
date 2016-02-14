@@ -1,4 +1,4 @@
-function date   (){
+function date (){
     var months = [" января ", " февраля ", " марта ", " апреля ", " мая ", " июня ", " июля ", " августа ", " сентября ", " октября ", " ноября ", " декабря "];
     var days   = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
 
@@ -26,17 +26,21 @@ var countFullWeaksBeforeNY     = Math.floor((new Date().getTime() - new Date(new
 var countFullWeaksAfterNY      = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, dateFirstMondayInJanuary).getTime())   / 86400000 / 7)
     
 var bars = {
+
 	leftOpacity: '.2',
 	rightOpacity: '1',
+
 	summer: false,
-        swapped: false,
+    swapped: false,
+
 	style: 'red.css',
 
 	swap: function() {
 		this.leftOpacity = [this.rightOpacity, this.rightOpacity = this.leftOpacity][0]
 		this.style = 'blue.css'
-                this.swapped = true
+        this.swapped = true
 	},
+
 	setStyle: function() {
 		var link = document.createElement('link')
 		var attrRel = document.createAttribute('rel')
@@ -49,23 +53,25 @@ var bars = {
 		link.setAttributeNode(attrHref)
 		document.head.appendChild(link)
 	},
+
 	main: function() {
 		this.setStyle()
 
 		window.addEventListener("load", function() {
 			date()
 			if(bars.summer) {
-            	                document.getElementById('firstBar').innerHTML  = "Лето"
-            	                document.getElementById('secondBar').innerHTML = "Лето"
-                	}
+                document.getElementById('firstBar').innerHTML  = "Лето"
+                document.getElementById('secondBar').innerHTML = "Лето"
+            }
 
-            		if(bars.swapped) {
-                		$('#firstBar').removeClass('disabled')
-                		$('#secondBar').addClass('disabled')
-            		}
+            if(bars.swapped) {
+                $('#firstBar').removeClass('disabled')
+                $('#secondBar').addClass('disabled')
+            }
 
-			 document.getElementById('firstBar').style.opacity  = bars.leftOpacity
-			 document.getElementById('secondBar').style.opacity = bars.rightOpacity
+            
+			document.getElementById('firstBar').style.opacity  = bars.leftOpacity
+			document.getElementById('secondBar').style.opacity = bars.rightOpacity
 		})
 	}
 }
@@ -93,7 +99,7 @@ else if (currentMonth < 8) {
         }                        
     }
     else if (currentMonth > 4) {
-        bars.leftOpacity = bars.rightOpacity = '.2'
+        /*bars.leftOpacity = bars.rightOpacity = '.2' */
         bars.summer = true
     }
 }

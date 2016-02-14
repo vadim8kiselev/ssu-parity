@@ -1,34 +1,34 @@
 *{
     margin: 0px;
     padding: 0px;
+    cursor: default;
+}
+
+html {
+    height: 100%;    
 }
 
 body{
-    background: #FFF;
     font-family: Arial, sans-serif;
     font-size: 170%;
-    color: #FFF;
-    width: 100%;
     height: 100%;
 }
 
 .header{
-    cursor: default;
     margin: 0px;
     width: 100%;
     height: 45px;
 }
 
 .brand{
-    cursor: default;
-    float: right;
-    padding-right: 10px;
+    float: left;
+    color: #FFF;
+    padding-left: 10px;
     margin: 6px;
 }
 
 @media screen and (max-width: 680px){
     .brand{
-        cursor: default;
         float: left;
         padding-left: 10px;
         margin: 6px;
@@ -36,22 +36,32 @@ body{
 }
 
 .content{
-    margin-top: 100px;
+    margin: 10% auto;
+    width: 70%;
+}
+
+#hello{
+    background-color: #FFF;
+    font-size: 0.9em;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .buttonContainer div {
-    cursor: default;
+    color: #FFF;
     border-radius: 8px;
     width: 200px;
     height: 70px;
-    padding-top: 30px ;
+    padding-top: 30px;
     text-align: center;
     opacity: 0
 }
 
 .buttonContainer {
-    width: 70%;
-    margin: 0 15%;
+    width: 100%;
+    height: 220px;
 }
 
 .leftButton{
@@ -63,108 +73,66 @@ body{
 }
 
 .footer{
-    background: #F8F8F8;
     position: absolute;
     bottom: 0;
-    margin: 0px;
-    outline: 1px solid #e7e7e7;
     width: 100%;
     height: 45px;
+    margin: 0px;
+    background: #F9F9F9;
+    outline: 1px solid #eeeeee;
 }
 
 .info{
-    cursor: default;
+    float: right;
+    padding-right: 15px;
     font-family: verdana, arial, sans-serif;
-    color: #000;
-    font-size: 0.6em;
+    color: #383838;
+    font-size: 0.65em;
     line-height: 45px;
-    padding-left: 15px;
 }
 
-#hello{
-    cursor: default;
-    background-color: #FFF;
-    font-size: 0.9em;
-    width: 100%;
-    min-height: 60px;
-    padding-top: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#info{
-    right: 8px;
-    bottom: 75px;
-    position: absolute;
-    width: 262px;
-    height: 122px;
-}
-
-@media screen and (max-width: 464px){
-    .info{
-        display: none;
-    }
-    .footer{
-        display: none;
-    }
-}
-
-@media screen and (max-height: 525px){
-    #info{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .buttonContainer {
-        width: 450px;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 500px){
-    .buttonContainer {
-        margin: 0 auto;
-        float: none;
-        width: 200px;
-        height: 100px;
-        display: block;
-    }
-
-    .buttonContainer div {
-        margin-bottom: 15px;
-    }
-}
-
-@media screen and (max-height: 400px) and (max-width: 500px) {
-    .disabled {
-        display: none;
-    }
-}
-
-@media screen and (max-height: 292px) {
+@media screen and (max-height: 330px) {
     .footer {
         display: none;
     }
 }
 
-@media screen and (max-height: 145px) {
+@media screen and (max-height: 45px) {
     .header{
         display: none;
     }
 }
-@media screen and (max-height: 260px) {
-     .buttonContainer {
+@media screen and (max-height: 285px) {
+    #hello {
+        display: none;
+    }
+     
+    .buttonContainer {
         display: none;
     }
 }
 
-@media screen and (max-width: 500px) {
-     #hello {
+@media screen and (max-width: 730px) {
+    #hello {
         display: none;
     }
-     .buttonContainer {
-        top: 135px;
+
+    .buttonContainer {
+        margin: 150px auto;
+        float: none;
+        width: 200px;
+        height: 260px;
+        display: block;
+    }
+
+    .buttonContainer div {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer{
+        display: none;
     }
 }
 
