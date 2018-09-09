@@ -64,6 +64,7 @@ var bars = {
         this.setStyle();
 
         window.addEventListener("load", function () {
+            document.getElementById('currentYear').innerHTML = new Date().getFullYear();
             date();
             if (bars.summer) {
                 document.getElementById('firstBar').innerHTML = "Лето";
