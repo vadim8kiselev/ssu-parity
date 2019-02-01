@@ -42,9 +42,9 @@ var bars = {
     },
 
     off: function () {
-        this.leftOpacity = this.rightOpacity = '0';
+        this.leftOpacity = this.rightOpacity = '1';
         this.style = 'summer.css';
-        //this.summer = true;
+        this.summer = true;
     },
 
     setStyle: function () {
@@ -82,7 +82,7 @@ var bars = {
     }
 };
 
-/*if (currentMonth > 8 && countFullWeeksBeforeNY % 2 != 0) {
+if (currentMonth > 8 && countFullWeeksBeforeNY % 2 != 0) {
     bars.swap();
 }
 else if (currentMonth == 8) {
@@ -100,16 +100,13 @@ else if (currentMonth < 8) {
                 bars.swap();
             }
         }
-        else if (countFullWeeksAfterNY % 2 == 0) {
+        else if (countFullWeeksAfterNY % 2 == 1) { // Fix for 2019 year
             bars.swap();
         }
     }
     else if (currentMonth > 4) {
         bars.off();
     }
-}*/
-
-// Disabled due to some problems with determination
-bars.off();
+}
 
 bars.main();
