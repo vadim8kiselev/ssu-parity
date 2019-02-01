@@ -42,9 +42,9 @@ var bars = {
     },
 
     off: function () {
-        this.leftOpacity = this.rightOpacity = '1';
+        this.leftOpacity = this.rightOpacity = '0';
         this.style = 'summer.css';
-        this.summer = true;
+        //this.summer = true;
     },
 
     setStyle: function () {
