@@ -82,7 +82,7 @@ var bars = {
     }
 };
 
-if (currentMonth > 8 && countFullWeeksBeforeNY % 2 != 0) {
+/*if (currentMonth > 8 && countFullWeeksBeforeNY % 2 != 0) {
     bars.swap();
 }
 else if (currentMonth == 8) {
@@ -107,6 +107,9 @@ else if (currentMonth < 8) {
     else if (currentMonth > 4) {
         bars.off();
     }
-}
+}*/
+
+// Disabled due to some problems with determination
+bars.off();
 
 bars.main();
