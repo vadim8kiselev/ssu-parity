@@ -5,13 +5,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="layout.css">
         <link rel="stylesheet" type="text/css" href="black.css">
+        <script type="text/javascript" src='http://code.jquery.com/jquery-latest.js'></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div class="header">
             <span class="brand">SSU Parity</span>
         </div>
         <div class="content">
-            <div id="hello">The site does not work this year due to SSU dispatcher mistake</div>
+            <div id="hello"></div>
+            <div class="buttonContainer">
+                <div id="firstBar" class="leftButton disabled">Числитель</div>
+                <div id="secondBar" class="rightButton">Знаменатель</div>
+            </div>
         </div>
         <div class="footer">
             <span class="info"> SSU Parity &#169 Copyright 2014 - <time id="currentYear">2020</time> by Vadim Kiselev</span>
