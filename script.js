@@ -100,7 +100,7 @@ else if (currentMonth < 8) {
                 bars.swap();
             }
         }
-        else if (countFullWeeksAfterNY % 2 == 0) {
+        else if (countFullWeeksAfterNY % 2 == 1) { // Fix for 2019 year
             bars.swap();
         }
     }
