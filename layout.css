@@ -29,14 +29,25 @@ body {
     align-items: center;
 }
 
-.helpButton {
+.help {
     width: 45px;
     height: 45px;
     border-radius: 300px;
     border: none;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 0 0 2px 1px;
+    padding: 1px 0 0 1px;
+    font-size: smaller;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help:active, .help:focus {
+    outline: none;
 }
 
 .footer {
@@ -51,7 +62,6 @@ body {
     float: right;
     padding-right: 15px;
     font-family: verdana, arial, sans-serif;
-    font-size: 0.65em;
     line-height: 45px;
 }
 
@@ -67,6 +77,11 @@ body {
 }
 
 .author {
+    text-decoration: none;
+}
+
+.author:hover {
+    color: #080808;
     text-decoration: none;
 }
 

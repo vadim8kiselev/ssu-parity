@@ -1,6 +1,10 @@
 $(document).ready(function (){
-    $(".helpButton").hover(function() {
-        $("#helperModal").modal('show');
+    $('[data-toggle="popover"]').popover({
+        content:
+            '<div class="information">' +
+                '<span>Синий цвет - числитель</span>' +
+                '<span> Красный цвет - знаменатель</span>' +
+            '</div>'
     });
 })
 
@@ -17,7 +21,6 @@ var countFullWeeksBeforeNY = Math.floor((new Date().getTime() - new Date(new Dat
 var countFullWeeksAfterNY = Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, dateFirstMondayInJanuary).getTime()) / 86400000 / 7);
 
 var bars = {
-
     summer: false,
     swapped: false,
 
@@ -52,7 +55,9 @@ var bars = {
         window.addEventListener("load", function () {
             document.getElementById('currentYear').innerHTML = new Date().getFullYear();
             if (bars.summer) {
-                document.getElementById('hello').innerHTML = "Лето";
+                document.getElementById('summer-notification').innerHTML =
+                    "Поздравляем! В летнее время нет необходимости следить за расписанием";
+                $('#help').hide();
             }
         })
     }
