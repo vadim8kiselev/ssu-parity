@@ -71,11 +71,6 @@ body {
     display: flex
 }
 
-.main-container span {
-    margin-bottom: 30px;
-    color: #ffffff
-}
-
 .author {
     text-decoration: none;
 }
@@ -83,20 +78,4 @@ body {
 .author:hover {
     color: #080808;
     text-decoration: none;
-}
-
-/* Height */
-
-@media screen and (max-height: 330px) {
-    .footer {
-        display: none;
-    }
-}
-
-/* Width */
-
-@media screen and (max-width: 500px) {
-    .footer {
-        display: none;
-    }
 }

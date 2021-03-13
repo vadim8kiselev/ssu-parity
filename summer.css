@@ -9,3 +9,9 @@
 .info, .author {
     color: #d4a24c;
 }
+
+.summer-notification {
+    font-size: large;
+    font-family: verdana, arial, sans-serif;
+    color: #DDD;
+}

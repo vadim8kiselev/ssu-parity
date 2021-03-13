@@ -22,13 +22,10 @@ let countFullWeeksAfterNY = Math.floor((new Date().getTime() - new Date(new Date
 
 let bars = {
     summer: false,
-    swapped: false,
-
     style: 'red.css',
 
     swap: function () {
         this.style = 'blue.css';
-        this.swapped = true
     },
 
     off: function () {
@@ -53,11 +50,11 @@ let bars = {
         this.setStyle();
 
         window.addEventListener("load", function () {
-            document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+            $('#currentYear').text(new Date().getFullYear());
             if (bars.summer) {
-                document.getElementById('summer-notification').innerHTML =
-                    "Поздравляем! В летнее время нет необходимости следить за расписанием";
                 $('#help').hide();
+                $('#summer-notification')
+                    .text("Поздравляем! В летнее время нет необходимости следить за расписанием");
             }
         })
     }
