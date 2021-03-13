@@ -80,20 +80,3 @@ body {
     color: #080808;
     text-decoration: none;
 }
-
-@media screen and (max-width: 1024px) {
-    .help {
-        width: 100px;
-        height: 100px;
-        font-size: 40px;
-    }
-
-    .information {
-        font-size: 19px;
-        width: 100%;
-    }
-
-    .footer {
-        font-size: 20px;
-    }
-}
