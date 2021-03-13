@@ -1,11 +1,11 @@
-.header {
+.content, .footer {
     background-color: #841F27;
 }
 
-.buttonContainer div {
-    background-color: #841F27;
+.helpButton {
+    background: #8f212a;
 }
 
-#hello {
-    color: #841F27;
+.info, .author {
+    color: #61161c;
 }

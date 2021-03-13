@@ -4,23 +4,42 @@
         <title>SSU Parity</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="layout.css">
-        <link rel="stylesheet" type="text/css" href="black.css">
         <script type="text/javascript" src='http://code.jquery.com/jquery-latest.js'></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="script.js"></script>
     </head>
-    <body>
-        <div class="header">
-            <span class="brand">SSU Parity</span>
+<body>
+    <div class="content">
+        <div class="main-container">
+            <span id="hello"></span>
+            <button type="button" class="helpButton" data-toggle="modal" data-target="#helperModal">?</button>
         </div>
-        <div class="content">
-            <div id="hello"></div>
-            <div class="buttonContainer">
-                <div id="firstBar" class="leftButton disabled">Числитель</div>
-                <div id="secondBar" class="rightButton">Знаменатель</div>
+    </div>
+    <div class="modal fade" id="helperModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Числитель
+                </div>
             </div>
         </div>
-        <div class="footer">
-            <span class="info"> SSU Parity &#169 Copyright 2014 - <time id="currentYear">2020</time> by Vadim Kiselev</span>
-        </div>
+    </div>
+    <div class="footer">
+        <span class="info"> SSU Parity &#169 Copyright 2014 - <time id="currentYear">2021</time> by <a
+                href="https://vk.com/kiselev" class="author">Vadim Kiselev</a></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     </body>
 </html>

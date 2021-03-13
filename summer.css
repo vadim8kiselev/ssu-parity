@@ -1,16 +1,11 @@
-.header {
-    background-color: #fffacd;
+.content, .footer {
+    background-color: #ecb455;
 }
 
-.brand {
-    color: #4d4d4d;
+.helpButton {
+    background: #edbb66;
 }
 
-.buttonContainer div {
-    background-color: #fffacd;
-    color: #888888;
-}
-
-#hello {
-    color: #5b5b5b;
+.info, .author {
+    color: #bc9044;
 }
