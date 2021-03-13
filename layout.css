@@ -30,14 +30,14 @@ body {
 }
 
 .help {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 300px;
     border: none;
     color: #FFFFFF;
     text-decoration: none;
     padding: 1px 0 0 1px;
-    font-size: smaller;
+    font-size: 25px;
 }
 
 .information {
@@ -78,4 +78,12 @@ body {
 .author:hover {
     color: #080808;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .help {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
 }
