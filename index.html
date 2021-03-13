@@ -3,24 +3,32 @@
     <head>
         <title>SSU Parity</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="layout.css">
-        <link rel="stylesheet" type="text/css" href="black.css">
-        <script type="text/javascript" src='http://code.jquery.com/jquery-latest.js'></script>
-        <script src="script.js"></script>
     </head>
     <body>
-        <div class="header">
-            <span class="brand">SSU Parity</span>
-        </div>
         <div class="content">
-            <div id="hello"></div>
-            <div class="buttonContainer">
-                <div id="firstBar" class="leftButton disabled">Числитель</div>
-                <div id="secondBar" class="rightButton">Знаменатель</div>
+            <span id="summer-notification" class="summer-notification"></span>
+            <div class="main-container">
+                <button type="button" class="help" id="help" data-toggle="popover" data-html="true"
+                        data-placement="top" data-trigger="hover">?</button>
             </div>
         </div>
         <div class="footer">
-            <span class="info"> SSU Parity &#169 Copyright 2014 - <time id="currentYear">2020</time> by Vadim Kiselev</span>
+            <span class="info"> SSU Parity &#169 Copyright 2014 - <time id="currentYear">2021</time> by
+                <a target="_blank" href="https://vk.com/kiselev" class="author">Vadim Kiselev</a></span>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
